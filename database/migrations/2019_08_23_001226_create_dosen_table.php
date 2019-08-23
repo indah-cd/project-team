@@ -14,7 +14,16 @@ class CreateDosenTable extends Migration
     public function up()
     {
         Schema::create('dosen', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->string('nidn');
+            $table->string('nama');
+            $table->string('email');
+            $table->string('jenis_kelamin');
+            $table->string('agama');
+            $table->text('alamat');    
+            $table->string('fakultas');
+            $table->string('program_studi');
+            $table->string('jadwal');
             $table->timestamps();
         });
     }
